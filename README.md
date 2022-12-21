@@ -2,6 +2,12 @@
 
 Supabase Storage plugin for MedusaJS.
 
+## Installation
+
+```bash
+yarn add medusa-file-supabase
+```
+
 ## Usage
 
 Create a Supabase Project and add a Public Storage Bucket.
