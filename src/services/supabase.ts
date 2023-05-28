@@ -36,7 +36,7 @@ class SupabaseService extends FileService {
   async upload(file: { path: string; originalname: string }) {
     const { data, error } = await this.storageClient()
       .from(this.bucket_name)
-      .upload(file.path, createReadStream(file.path));
+      .upload(file.path, createReadStream(file.path), { duplex: "half" });
 
     if (error) {
       console.log(error);
